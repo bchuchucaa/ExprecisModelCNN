@@ -1,6 +1,10 @@
 # ExprecisModelCNN
 Modelo red convolucional reconocimiento de expresiones faciales
 
+## DESCRIPCION DEL REPOSITORIO
+ReconocimientoFacialCNN.html  en el cual se describe el proceso desarrollado para la construccion de la arquitectura
+ReconocimientoFacialCNN.ypynb implementacion delmodelo propuesto en lenguaje python.
+
 
 ## DATASER FER-2013
 The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centred and occupies about the same amount of space in each image.
