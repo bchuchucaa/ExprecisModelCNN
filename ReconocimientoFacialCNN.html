@@ -13072,6 +13072,7 @@ div#notebook {
     </script>
     <!-- End of mathjax configuration --></head>
 <body>
+
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
@@ -13080,7 +13081,13 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Preprocesamiento">Carga de Datos<a class="anchor-link" href="#Preprocesamiento">&#182;</a></h1>
+        </div>
+
+
+
+        <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
 <span class="n">uploaded</span> <span class="o">=</span> <span class="n">files</span><span class="o">.</span><span class="n">upload</span><span class="p">();</span>
 </pre></div>
 
@@ -13259,7 +13266,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#SEPARACION DE TRAIN Y TEST </span>
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Preprocesamiento">Separacion Train Test<a class="anchor-link" href="#Preprocesamiento">&#182;</a></h1>
+        </div>
+
+        <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#SEPARACION DE TRAIN Y TEST </span>
 <span class="n">data_entrenamiento</span><span class="o">=</span><span class="s2">&quot;/content/data/train&quot;</span>
 <span class="n">data_validacion</span><span class="o">=</span><span class="s2">&quot;/content/data/test&quot;</span>
 </pre></div>
@@ -13274,7 +13285,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#PARAMETROS PARA LA NORMALIZACION DE LAS IMAGENES Y LA FASE DE ENTRENAMIENTO </span>
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Preprocesamiento">Parametros Normalizacion<a class="anchor-link" href="#Preprocesamiento">&#182;</a></h1>
+        </div>
+
+        <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#PARAMETROS PARA LA NORMALIZACION DE LAS IMAGENES Y LA FASE DE ENTRENAMIENTO </span>
 <span class="c1">#Altura y longitud hacen referencia al tamano de la imagen altura=100 y longitud=100</span>
 <span class="c1">#clases=7 ya que existen 7 clases disponibles para la clasificacion del dataset</span>
 
@@ -13298,7 +13313,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#PREPROCESAMIENTO DE IMAGENES</span>
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Preprocesamiento">Preprocesamiento<a class="anchor-link" href="#Preprocesamiento">&#182;</a></h1>
+        </div>
+
+        <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#PREPROCESAMIENTO DE IMAGENES</span>
 <span class="n">entrenamiento_datagen</span><span class="o">=</span> <span class="n">ImageDataGenerator</span><span class="p">(</span>
     <span class="n">rescale</span><span class="o">=</span><span class="mf">1.</span><span class="o">/</span><span class="mi">255</span><span class="p">,</span>
     <span class="n">shear_range</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
@@ -13436,7 +13455,11 @@ Found 3589 images belonging to 7 classes.
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#INICIAMOS EL MODELO RED REURONAL CNN</span>
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Preprocesamiento">Modelo Red Neuronal Convolucional<a class="anchor-link" href="#Preprocesamiento">&#182;</a></h1>
+        </div>
+
+        <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#INICIAMOS EL MODELO RED REURONAL CNN</span>
 <span class="n">cnn</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
 <span class="c1">#Añadimos una capa convolucional con 32 filtros de 3píxeles de ancho x 3píxeles de altura. Vamos a aplicarlo a cada imagen. </span>
 <span class="c1">#Cada filtro sería de: 3x3.</span>
@@ -13503,7 +13526,11 @@ Found 3589 images belonging to 7 classes.
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Fase de training</span>
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Preprocesamiento">Training<a class="anchor-link" href="#Preprocesamiento">&#182;</a></h1>
+        </div>
+
+        <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Fase de training</span>
 <span class="c1">#hacemos que la red recorra la fase de entrenamiento (epochs) 100 veces.</span>
 <span class="n">history</span><span class="o">=</span><span class="n">cnn</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">imagen_entrenamiento</span><span class="p">,</span><span class="n">steps_per_epoch</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span><span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="n">imagen_validacion</span><span class="p">,</span><span class="n">validation_steps</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="c1">#en 50 epochs aproximadamente: loss: 0.4032 - accuracy: 0.8588</span>
@@ -13736,7 +13763,11 @@ Epoch 100/100
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># summarize history for accuracy</span>
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Preprocesamiento">Figura Accuracy<a class="anchor-link" href="#Preprocesamiento">&#182;</a></h1>
+        </div>
+
+        <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># summarize history for accuracy</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;accuracy&#39;</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_accuracy&#39;</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;model accuracy&#39;</span><span class="p">)</span>
@@ -13791,7 +13822,11 @@ Epoch 100/100
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#summarize history for loss</span>
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Preprocesamiento">Figura Loss <a class="anchor-link" href="#Preprocesamiento">&#182;</a></h1>
+        </div>
+
+        <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#summarize history for loss</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;loss&#39;</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_loss&#39;</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;model loss&#39;</span><span class="p">)</span>
@@ -13889,7 +13924,11 @@ Loaded model from disk
 <div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#RESUMEN DE LA RED NEURONAL</span>
+        <div class="text_cell_render border-box-sizing rendered_html">
+            <h1 id="Preprocesamiento">RESUMEN DE LA RED NEURONAL<a class="anchor-link" href="#Preprocesamiento">&#182;</a></h1>
+        </div>
+
+        <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#RESUMEN DE LA RED NEURONAL</span>
 <span class="n">cnn</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 <span class="c1">#GUARDAR LOS PESOS Y EL MODELO DE LA RED NEURONAL</span>
 <span class="c1">#cnn.save(&#39;/content/modelo/modelo.h5&#39;)</span>
