@@ -2,8 +2,8 @@
 Modelo red convolucional reconocimiento de expresiones faciales
 
 ## DESCRIPCION DEL REPOSITORIO
-ReconocimientoFacialCNN.html  en el cual se describe el proceso desarrollado para la construccion de la arquitectura
-ReconocimientoFacialCNN.ypynb implementacion delmodelo propuesto en lenguaje python.
+1.ReconocimientoFacialCNN.html  en el cual se describe el proceso desarrollado para la construccion de la arquitectura
+2.ReconocimientoFacialCNN.ypynb implementacion delmodelo propuesto en lenguaje python.
 
 
 ## DATASER FER-2013
