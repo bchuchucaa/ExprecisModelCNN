@@ -3,17 +3,10 @@ Modelo red convolucional reconocimiento de expresiones faciales
 
 
 ## SKIN CANCER ISIC DATASET
-EN. This set consists of 2357 images of malignant and benign oncological diseases, which were formed from The International Skin Imaging Collaboration (ISIC). All images were sorted according to the classification taken with ISIC, and all subsets were divided into the same number of images, with the exception of melanomas and moles, whose images are slightly dominant.
+The data consists of 48x48 pixel grayscale images of faces. The faces have been automatically registered so that the face is more or less centred and occupies about the same amount of space in each image.
 
-The data set contains the following expressions:
+The task is to categorize each face based on the emotion shown in the facial expression into one of seven categories (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral). The training set consists of 28,709 examples and the public test set consists of 3,589 examples.
 
-angry
-disgust
-happy
-sad
-neutral
-surprised
-scary
 
 ## DEPENDENCIAS
 
